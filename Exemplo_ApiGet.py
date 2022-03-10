@@ -12,8 +12,9 @@ def Buscar_Dados():
         'https://economia.awesomeapi.com.br/last/USD-BRL')
     # pega o retorno e joga em um json
     resp = json.loads(request.content)
-    # Retorna so somente um item do json - resp['USDBRL']['bid']
-    # Retorna o json inteiro - resp['USDBRL']['bid']
-    return resp['USDBRL']['bid']
+    return resp
 
-print(Buscar_Dados())
+
+# Retorna so somente um item do json - Buscar_Dados()['USDBRL']['bid']
+# Retorna o json inteiro - Buscar_Dados()
+print(Buscar_Dados()['USDBRL']['bid'])
